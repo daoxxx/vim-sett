@@ -78,9 +78,16 @@ if !empty(&viminfo)
 endif
 set sessionoptions-=options
 
+colorscheme elflord
+
 " Allow color schemes to do bright colors without forcing bold.
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
+endif
+" use 256 colors in Console mode if we think the terminal supports it
+if &term =~? 'mlterm\|xterm'
+    set t_Co=256
+    silent! colorscheme zenburn
 endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
@@ -89,5 +96,11 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 inoremap <C-U> <C-G>u<C-U>
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " vim:set ft=vim et sw=2:
