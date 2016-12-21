@@ -88,7 +88,11 @@ you're feeling especially charitable, follow [tpope](http://tpo.pe/) on
 
 This pairs great with [sleuth.vim](https://github.com/tpope/vim-sleuth).
 
+## Acknowlegment
+Thanks to Aristotle Pagaltzis for his useful buffer tabline add-on [GitHub](https://github.com/ap/vim-buftabline)
+
 ## License
 
 Copyright © Tim Pope.  Distributed under the same terms as Vim itself.
 See `:help license`.
+
