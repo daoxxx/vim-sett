@@ -37,7 +37,7 @@ hi default link BufTabLineActive  PmenuSel
 hi default link BufTabLineHidden  TabLine
 hi default link BufTabLineFill    TabLineFill
 
-let g:buftabline_numbers    = get(g:, 'buftabline_numbers',    0)
+let g:buftabline_numbers    = get(g:, 'buftabline_numbers',    1)
 let g:buftabline_indicators = get(g:, 'buftabline_indicators', 0)
 let g:buftabline_separators = get(g:, 'buftabline_separators', 0)
 let g:buftabline_show       = get(g:, 'buftabline_show',       2)
