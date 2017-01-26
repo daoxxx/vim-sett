@@ -19,8 +19,9 @@ if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
   set t_Co=16
 endif
 " use 256 colors in Console mode if we think the terminal supports it
-if &term =~? 'mlterm\|xterm'
-    set t_Co=256
+"if &term =~? 'mlterm\|xterm'
+"    set t_Co=256
+if &t_Co == 256
     silent! colorscheme happy_hacking
 "    silent! colorscheme  zenburn
 endif
