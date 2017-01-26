@@ -5,9 +5,14 @@ set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 
+let mapleader = "\<Space>"
+
+nnoremap <leader>l :noh<CR>
+
+
 set background=dark
 "colorscheme happy_hacking
-"colorscheme elflord
+colorscheme elflord
 
 " Allow color schemes to do bright colors without forcing bold.
 if &t_Co == 8 && $TERM !~# '^linux\|^Eterm'
