@@ -7,8 +7,10 @@ nnoremap <C-P> :bprev<CR>
 
 let mapleader = "\<Space>"
 
+"clear search hilights
 nnoremap <leader>l :noh<CR>
-
+"escape insert mode
+inoremap jk <ESC>
 
 set background=dark
 "colorscheme happy_hacking
