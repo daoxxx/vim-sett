@@ -1,5 +1,15 @@
-"set laststatus=2
+call plug#begin('~/.vim/plugged')
+Plug 'pangloss/vim-javascript'
+Plug 'crusoexia/vim-javascript-lib'
+Plug 'crusoexia/vim-monokai'
+Plug 'mxw/vim-jsx'
+call plug#end()
 
+" vim-jsx enable in .js files
+let g:jsx_ext_required = 0
+
+"set laststatus=2
+"
 "settings for buffer editing
 set hidden
 nnoremap <C-N> :bnext<CR>
@@ -30,7 +40,19 @@ endif
 "if &term =~? 'mlterm\|xterm'
 "    set t_Co=256
 if &t_Co == 256
-    silent! colorscheme happy_hacking
-"    silent! colorscheme  zenburn
+"    silent! colorscheme happy_hacking
+    silent! colorscheme monokai
 endif
 
+" Damian Conway's Die Blinkënmatchen: highlight matches
+nnoremap <silent> n n:call HLNext(50)<cr>
+nnoremap <silent> N N:call HLNext(50)<cr>
+
+function! HLNext (blinktime)
+  let target_pat = '\c\%#'.@/
+  let ring = matchadd('ErrorMsg', target_pat, 101)
+  redraw
+  exec 'sleep ' . float2nr(a:blinktime) . 'm'
+  call matchdelete(ring)
+  redraw
+endfunction

@@ -50,8 +50,12 @@ if &encoding ==# 'latin1' && has('gui_running')
 endif
 
 if &listchars ==# 'eol:$'
+"  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+  exec "set listchars=tab:\u0320\u02f2,trail:\uB7,nbsp:\uB7,extends:>,precedes:<"
 endif
+
+set list
 
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j " Delete comment character when joining commented lines
@@ -92,3 +96,13 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " vim:set ft=vim et sw=2:
+"
+set path+=**
+
+"netrw settings
+let g:netrw_banner=0
+let g:netrw_liststyle = 3
+"let g:netrw_browse_split = 4
+"let g:netrw_altv = 1
+"let g:netrw_winsize = 25
+autocmd FileType netrw setl bufhidden=wipe
