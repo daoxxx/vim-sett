@@ -50,9 +50,7 @@ if &encoding ==# 'latin1' && has('gui_running')
 endif
 
 if &listchars ==# 'eol:$'
-"  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-  exec "set listchars=tab:\u0320\u02f2,trail:\uB7,nbsp:\uB7,extends:>,precedes:<"
+  set listchars=tab:..,trail:·,nbsp:~,extends:>,precedes:<
 endif
 
 set list
