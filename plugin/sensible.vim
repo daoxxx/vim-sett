@@ -1,6 +1,8 @@
 " sensible.vim - Defaults everyone can agree on
 " Maintainer:   Tim Pope <http://tpo.pe/>
 " Version:      1.1
+scriptencoding utf-8
+set encoding=utf-8
 
 if exists('g:loaded_sensible') || &compatible
   finish
